@@ -24,7 +24,7 @@ function exibirNomeListaTela(id,texto){
 
 function exibirAmigoSorteado(id,texto){
     let campo = document.getElementById(id);
-    campo.innerHTML += `<li>${texto}<li>`;
+    campo.innerHTML += `<li> O seu amigo secreto é ${texto}<li>`;
 }
 
 function sortearAmigo(){
@@ -35,13 +35,6 @@ function sortearAmigo(){
     let amigoSorteado = Math.floor(Math.random() * listaAmigoSecreto.length);
     let amigoSortudo = listaAmigoSecreto[amigoSorteado];
     document.getElementById('listaAmigos').innerHTML = '';
-    exibirAmigoSorteado('listaAmigos',amigoSortudo);
+    exibirAmigoSorteado('listaAmigos',amigoSortudo);    
 }
 
-function recomecarSorteio(){
-    document.getElementById('listaAmigos').innerHTML = '';
-    document.getElementById('sorteado').innerHTML = '';
-    document.getElementById('amigo').innerHTML = '';
-    
-    listaAmigoSecreto = [];
-}
